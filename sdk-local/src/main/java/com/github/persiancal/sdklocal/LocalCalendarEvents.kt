@@ -44,6 +44,7 @@ class LocalCalendarEvents {
 
         private var calendarTypeList = arrayListOf<CalendarType>()
 
+        @JvmStatic
         fun init(
             context: Context
         ) {
@@ -146,10 +147,12 @@ class LocalCalendarEvents {
             }
         }
 
+        @JvmStatic
         fun getInstance(): LocalCalendarEvents {
             return instance
         }
 
+        @JvmStatic
         fun addCalendar(calendarType: CalendarType): Companion {
             calendarTypeList.add(calendarType)
             return this

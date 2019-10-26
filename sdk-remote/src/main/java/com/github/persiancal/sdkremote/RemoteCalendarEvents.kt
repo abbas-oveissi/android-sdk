@@ -44,6 +44,7 @@ class RemoteCalendarEvents {
 
         private var calendarTypeList = arrayListOf<CalendarType>()
 
+        @JvmStatic
         fun init(
             context: Context
         ) {
@@ -162,10 +163,12 @@ class RemoteCalendarEvents {
             error.printStackTrace()
         }
 
+        @JvmStatic
         fun getInstance(): RemoteCalendarEvents {
             return instance
         }
 
+        @JvmStatic
         fun addCalendar(calendarType: CalendarType): Companion {
             calendarTypeList.add(calendarType)
             return this
